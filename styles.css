@@ -945,7 +945,7 @@ nav.scrolled {
 	align-items: center;
 	justify-content: center;
 	font-size: 50px;
-	opacity: 0.3;
+	opacity: 1.0;
 	transition: transform 0.5s ease, opacity 0.5s ease;
 	position: relative;
 	overflow: hidden;
@@ -977,7 +977,6 @@ nav.scrolled {
 
 .collection-card:hover .collection-thumbnail {
 	transform: scale(1.05);
-	opacity: 0.8;
 }
 
 .collection-card:hover {
