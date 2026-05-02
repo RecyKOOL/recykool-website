@@ -111,13 +111,6 @@
             <p class="section-subtitle">Group members, responsibilities, and profiles</p>
         </div>
         
-        <!-- UPDATED FILTER TABS -->
-        <div class="category-tabs">
-            <button class="tab-btn active" data-category="all">All</button>
-            <button class="tab-btn" data-category="agentic-ai">Agentic AI</button>
-            <button class="tab-btn" data-category="digital-twin">Digital Twin</button>
-            <button class="tab-btn" data-category="vlm">VLM</button>
-        </div>
 
         <div class="grid" id="collectionsGrid">
 
@@ -233,40 +226,45 @@
                     <span class="label">Project Overview</span>
 
                     <p>
-                        RecyKool helps users make correct disposal decisions using multimodal AI.
-                        A user can submit text, images, or combined inputs to identify materials, understand common contamination mistakes,
-                        and receive grounded guidance that explains recommended actions. The system is designed to be practical, transparent,
-                        and aligned with real-world operational constraints.
-                        <br><br>
-                        <strong>Major Features:</strong> material identification, disposal guidance, retrieval-grounded explanations,
-                        structured knowledge reasoning, and context awareness via digital-twin concepts.
+                        RecyKool is a multimodal AI system designed to support operations within Waste Management’s conveyor sorting environment. 
+                        The platform is organized into three core components. The AI Assistant provides a conversational interface backed by EOD reports and equipment manuals, allowing users to query system behavior and receive grounded guidance. 
+                        A vision-language model (VLM) handles material characterization and flagging, including detection of jam-causing items and recognition of unsafe worker behavior. 
+                        A digital twin component models the conveyor system, enabling simulation and providing additional context for understanding real-time conditions and operational issues.
                     </p>
 
-                    <div class="feature-highlights">
-                        <div class="highlight-item">
-                            <div class="highlight-icon">🧠</div>
-                            <div class="highlight-title">Technologies</div>
-                            <div class="highlight-desc">
-                                <a href="https://fastapi.tiangolo.com/" target="_blank" rel="nofollow" style="color: var(--accent); text-decoration:none;">FastAPI</a>,
-                                <a href="https://www.docker.com/" target="_blank" rel="nofollow" style="color: var(--accent); text-decoration:none;">Docker</a>,
-                                <a href="https://www.python.org/" target="_blank" rel="nofollow" style="color: var(--accent); text-decoration:none;">Python</a>
-                            </div>
-                        </div>
+                    <h3 class="features-title">Features</h3>
 
-                        <div class="highlight-item">
-                            <div class="highlight-icon">👓</div>
-                            <div class="highlight-title">Platform</div>
-                            <div class="highlight-desc">
-                                Vision-based UI concepts and multimodal interaction for a modern guidance experience.
-                            </div>
+                    <div class="overview-feature-list">
+                        <div class="overview-feature">
+                            <h3>Multi Modal AI Assistant <span>(KG + MRAG)</span></h3>
+                            <p>
+                                Supports text and image-based querying, connects user requests to retrieved documentation,
+                                and uses knowledge graph reasoning to provide more grounded operational guidance.
+                            </p>
                         </div>
-
-                        <div class="highlight-item">
-                            <div class="highlight-icon">♻️</div>
-                            <div class="highlight-title">AI Approach</div>
-                            <div class="highlight-desc">
-                                VLM + RAG + Knowledge Graph reasoning to reduce hallucination and improve reliability.
-                            </div>
+                    
+                        <div class="overview-feature">
+                            <h3>Digital Twin</h3>
+                            <p>
+                                Provides an Omniverse-based facility simulation concept for understanding conveyor activity,
+                                camera input, and real-time monitoring in a visual operational context.
+                            </p>
+                        </div>
+                    
+                        <div class="overview-feature">
+                            <h3>Jamming Object Detection <span>(VLM)</span></h3>
+                            <p>
+                                Uses a vision-language model approach to identify materials that may cause jams or disruptions
+                                in the sorting line.
+                            </p>
+                        </div>
+                    
+                        <div class="overview-feature">
+                            <h3>Human Safety / Behavior Modeling</h3>
+                            <p>
+                                Explores unsafe action detection using real and synthetic data to support earlier awareness of
+                                hazardous worker behavior.
+                            </p>
                         </div>
                     </div>
 
@@ -274,15 +272,8 @@
                 </div>
 
                 <div class="featured-image-section">
-                    <div class="featured-image-grid">
-                        <div class="featured-img">
-                            <img src="images/chatbot.jpeg" alt="RecyKool UI Screenshot">
-                        </div>
                         <div class="featured-img">
                             <img src="images/framework_diagram.jpg" alt="RecyKool Pipeline / Architecture">
-                        </div>
-                        <div class="featured-img">
-                            <img src="images/digital-twin.jpeg" alt="RecyKool Digital Twin Context">
                         </div>
                     </div>
                 </div>
@@ -339,11 +330,54 @@
         </div>
     </section>
 
-    <!-- DEMO + CONTACT (repurposed contact section) -->
+
+
     <section class="contact" id="contact">
         <div class="contact-container">
             <div class="contact-header">
-                <h2 class="section-title">Demo & Contact</h2>
+                <h2 class="section-title">Demo</h2>
+                <p class="section-subtitle">System walkthroughs</p>
+            </div>
+    
+            <div class="demo-grid">
+    
+                <!-- AI Assistant Demo -->
+                <div class="demo-card">
+                    <h3 class="demo-title">AI Assistant</h3>
+                    <video controls>
+                        <source src="videos/ai-assistant-demo.mp4" type="video/mp4">
+                    </video>
+                </div>
+    
+                <!-- Digital Twin Demo -->
+                <div class="demo-card">
+                    <h3 class="demo-title">Digital Twin</h3>
+                    <video controls>
+                        <source src="videos/digital-twin-demo.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <div class="demo-card">
+                    <h3 class="demo-title">VLM - Unsafe Gesture</h3>
+                    <video controls>
+                        <source src="videos/unsafe-behavior-demo.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <div class="demo-card">
+                    <h3 class="demo-title">Material Characterization</h3>
+                    <img src="images/material-characterization.png" alt="Material Characterization Demo">
+                </div>
+    
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT (repurposed contact section) -->
+    <section class="contact" id="contact">
+        <div class="contact-container">
+            <div class="contact-header">
+                <h2 class="section-title">Contact</h2>
                 <p class="section-subtitle">Screenshots, video, and project links</p>
             </div>
 
@@ -379,60 +413,7 @@
                         <button type="submit" class="form-submit">Send Message</button>
                     </form>
                 </div>
-
-                <div class="contact-info">
-                    <div class="info-item">
-                        <div class="info-icon">🎓</div>
-                        <div class="info-content">
-                            <h3>CSUN Senior Design</h3>
-                            <p>
-                                <a href="https://www.csun.edu/" target="_blank" rel="nofollow">California State University, Northridge</a><br>
-                                Course Projects Page:
-                                <a href="https://www.csun.edu/~xjiang/SeniorDesign/" target="_blank" rel="nofollow">Back to Course Page</a>
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="info-item">
-                        <div class="info-icon">🔗</div>
-                        <div class="info-content">
-                            <h3>Project Links</h3>
-                            <p>
-                                Repo: <a href="#" rel="nofollow">GitHub</a><br>
-                                Demo: <a href="#" rel="nofollow">YouTube</a><br>
-                                Documentation: <a href="#" rel="nofollow">Project Notes</a>
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="info-item">
-                        <div class="info-icon">🧩</div>
-                        <div class="info-content">
-                            <h3>Tech Stack</h3>
-                            <p>
-                                API: FastAPI • Python<br>
-                                Infra: Docker • Cloud Storage (if used)<br>
-                                AI: Vision-Language • RAG • Knowledge Graph
-                            </p>
-                        </div>
-                    </div>
-                </div>
             </div>
-
-            <!-- Replace the map iframe with your 3–5 minute YouTube demo -->
-            <div class="map-section">
-                <div class="map-container">
-                    <iframe
-                        src="https://www.youtube.com/embed/VIDEO_ID_HERE"
-                        title="RecyKool Demo Video"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen
-                        loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                </div>
-            </div>
-
         </div>
     </section>
 
@@ -501,6 +482,6 @@
         </div>
     </footer>
 
-    <script src="templatemo-noir-scripts.js"></script>
+    <script src="home-page.js"></script>
 </body>
 </html>
