@@ -230,6 +230,7 @@ nav.scrolled {
 	.testimonial-card {
 		padding: 25px;
 	}
+	
 }
 
 /* Medium screens - stack navigation */
@@ -1977,5 +1978,222 @@ footer {
 	.footer-bottom {
 		flex-direction: column;
 		text-align: center;
+	}
+}
+
+/* Technologies Used Section */
+.technologies-used {
+	margin-top: 70px;
+	padding: clamp(28px, 4vw, 50px);
+	background: linear-gradient(135deg, rgba(255, 255, 255, 0.03), rgba(46, 125, 50, 0.04));
+	border: 1px solid rgba(255, 255, 255, 0.08);
+	border-radius: 16px;
+	position: relative;
+	overflow: hidden;
+	text-align: center;
+}
+
+.technologies-used::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(90deg, transparent, var(--accent), #66BB6A, transparent);
+}
+
+.technologies-header {
+	text-align: center;
+	max-width: 850px;
+	margin: 0 auto 42px;
+}
+
+.technologies-header .label {
+	color: var(--accent);
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	font-size: 12px;
+	margin-bottom: 10px;
+	display: block;
+}
+
+.technologies-header h3 {
+	font-size: clamp(28px, 3vw, 38px);
+	margin-bottom: 14px;
+	color: white;
+	letter-spacing: -1px;
+}
+
+.technologies-header p {
+	color: var(--text-muted);
+	line-height: 1.7;
+	font-size: clamp(14px, 1.4vw, 16px);
+	max-width: 760px;
+	margin: 0 auto;
+}
+
+/*
+	Desktop layout:
+	- 6 total grid columns
+	- First 2 cards span 3 columns each = 2 cards on row 1
+	- Last 3 cards span 2 columns each = 3 cards on row 2
+*/
+.technology-grid {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	gap: 26px;
+	max-width: 1220px;
+	margin: 0 auto;
+	align-items: stretch;
+}
+
+.technology-card {
+	grid-column: span 2;
+	min-height: 300px;
+	padding: 30px;
+	background: rgba(0, 0, 0, 0.35);
+	border: 1px solid rgba(255, 255, 255, 0.08);
+	border-radius: 14px;
+	transition: all 0.3s ease;
+	text-align: left;
+	display: flex;
+	flex-direction: column;
+}
+
+.technology-card:nth-child(1),
+.technology-card:nth-child(2) {
+	grid-column: span 3;
+}
+
+.technology-card:hover {
+	transform: translateY(-5px);
+	border-color: var(--accent);
+	box-shadow: 0 15px 35px rgba(46, 125, 50, 0.18);
+	background: rgba(46, 125, 50, 0.08);
+}
+
+.technology-card h4 {
+	color: white;
+	font-size: 18px;
+	line-height: 1.25;
+	margin-bottom: 22px;
+	text-align: center;
+}
+
+.technology-list,
+.technology-card ul {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	gap: 13px;
+}
+
+.technology-list li,
+.technology-card li {
+	color: var(--text-muted);
+	font-size: 14px;
+	line-height: 1.5;
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+
+.technology-list li::before,
+.technology-card li::before {
+	display: none;
+}
+
+.tech-icon-slot {
+	width: 34px;
+	height: 34px;
+	flex: 0 0 34px;
+	border-radius: 10px;
+	border: 1px solid rgba(46, 125, 50, 0.45);
+	background: rgba(46, 125, 50, 0.12);
+	box-shadow: inset 0 0 12px rgba(46, 125, 50, 0.12);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+}
+
+.tech-icon-slot img {
+	width: 22px;
+	height: 22px;
+	object-fit: contain;
+	display: block;
+}
+
+/* Smaller screens stack every card vertically */
+@media (max-width: 1100px) {
+	.technologies-used {
+		margin-top: 50px;
+		padding: 32px 24px;
+	}
+
+	.technology-grid {
+		grid-template-columns: 1fr;
+		gap: 22px;
+		max-width: 680px;
+	}
+
+	.technology-card,
+	.technology-card:nth-child(1),
+	.technology-card:nth-child(2) {
+		grid-column: auto;
+		min-height: auto;
+	}
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+	.technologies-used {
+		margin-top: 40px;
+		padding: 26px 16px;
+		border-radius: 12px;
+	}
+
+	.technologies-header {
+		margin-bottom: 28px;
+	}
+
+	.technology-grid {
+		gap: 18px;
+		max-width: 100%;
+	}
+
+	.technology-card {
+		width: 100%;
+		padding: 22px 18px;
+	}
+
+	.technology-card h4 {
+		font-size: 17px;
+		margin-bottom: 18px;
+	}
+
+	.technology-list li,
+	.technology-card li {
+		font-size: 13px;
+		gap: 10px;
+	}
+
+	.tech-icon-slot {
+		width: 30px;
+		height: 30px;
+		flex-basis: 30px;
+		border-radius: 8px;
+	}
+
+	.tech-icon-slot img {
+		width: 20px;
+		height: 20px;
 	}
 }
